@@ -1,14 +1,14 @@
-# FirstRepeatedChar
+# FirstDuplicateChar
 Certenly! this is one of the questions that has alot of answers.
 However i liked to interoduce my answer to the compitiion.
 
 my code focuses on effeciency rather than simplicity, However it is pretty simple if understood correctly!
 
-The question is "If you were givin a string of English lower-case letters , find the First Repeated Character in that string"
+The question is "If you were givin a string of English lower-case letters , find the First Duplicate Character in that string"
 
 and my answer to this question is the following code : 
 ```C
-char getFirstRepeatedChar(char str[]) 
+char getFirstDuplicateChar(char str[]) 
 {
 	const int ENGLISH_CHARACTERS_COUNT = 26;
 	bool english_characters_tracker[ENGLISH_CHARACTERS_COUNT];
@@ -38,9 +38,9 @@ now to a fresh eye in programming , this looks like a mess , what is going on ? 
 Iam going to explain this code line by line so hopefully you come out with better understanding of how it works and maybe give you more ideas to how should you solve your algorithems in a better and more effecient way.
 
 first lets start with the easiest, *function signature*
-```char getFirstRepeatedChar(char str[])```
-the function returns a character (```char```) which is supposedly the first repeated character in the string
-the function name is ```getFirstRepeatedChar``` which is a unique identifier for this function,
+```char getFirstDuplicateChar(char str[])```
+the function returns a character (```char```) which is supposedly the first duplicate character in the string
+the function name is ```getFirstDuplicateChar``` which is a unique identifier for this function,
 and it takes a single parameter with type of "character array" and is identified with the name ```str```
 
 ```{```
@@ -64,7 +64,7 @@ in our example we are expecting a specific number of characters which are any ch
 so if we look at the array in a low level , we are expecting an array of bytes (the size of ```char``` type in ```C``` is ```1```) and looking back at the ASCII table ![ASCII Table](https://static.wikia.nocookie.net/the-martian/images/3/30/ASCII_TABLE.JPG/revision/latest?cb=20170213161702)
 each byte of our expected string can hold a value between ```[96 < x < 123]```
 
-so knowing that , and also knowing that we have only 26 characters in the english alphabet which is not much , we can create an array with each element represents the amount of occurances of that character so our algorithm can expand beyond the single first repeated character too just with minor changes
+so knowing that , and also knowing that we have only 26 characters in the english alphabet which is not much , we can create an array with each element represents the amount of occurances of that character so our algorithm can expand beyond the single first duplicate character too just with minor changes
 
 anyways so now that we know what we could do , we can create our own algorithm 
 
@@ -122,7 +122,7 @@ for example :
 char callfunc(char a[])
 {
     //check if it is a valid string
-    return getFirstRepeatedChar(a);
+    return getFirstDuplicateChar(a);
 }
 ```
 

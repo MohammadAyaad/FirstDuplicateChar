@@ -1,7 +1,7 @@
 //===============================================================================================================================================================================
 //===============================================================================================================================================================================
 //===============================================================================================================================================================================
-//=======NOTE : LOTS OF COMMENTS IS CONSIDERED A BAD PRACTICE "not clean code" SO ALWAYS AVOID THEM , LOTS OF THEM ARE HERE FOR EDUCATIONAL AND VIEWING PURPOSES PURPOSES========
+//=======NOTE : LOTS OF COMMENTS ARE CONSIDERED A BAD PRACTICE "not clean code" SO ALWAYS AVOID THEM , LOTS OF THEM ARE HERE FOR EDUCATIONAL AND VIEWING PURPOSES PURPOSES=======
 //===============================================================================================================================================================================
 //=================================================================BY Mohammad Sameh Ayaad=======================================================================================
 //===============================================================================================================================================================================
@@ -10,7 +10,7 @@
 
 #include <stdio.h>
 
-char getFirstRepeatedChar(char str[]) // a string of ASCII lower-case characters ONLY
+char getFirstDuplicateChar(char str[]) // a string of ASCII lower-case characters ONLY
 {
 	//declare the variables
 	const int ENGLISH_CHARACTERS_COUNT = 26; //just for a cleaner code , nothing with performance , arguably slightly better memory usage (ignoring the compiler optimization)
@@ -48,5 +48,5 @@ char getFirstRepeatedChar(char str[]) // a string of ASCII lower-case characters
 
 int main(int argc,char** argv)
 {
-	printf("RESULT: '%c'",getFirstRepeatedChar(argv[1])); //the first parameter after the "filename" is what we read as our input string
+	printf("RESULT: '%c'",getFirstDuplicateChar(argv[1])); //the first parameter after the "filename" is what we read as our input string
 }
